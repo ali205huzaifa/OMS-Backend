@@ -20,8 +20,8 @@ A Node.js + Express + MongoDB-based backend for managing users, attendance, task
 ### 📁 Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/organization-management-system.git
-cd organization-management-system
+git clone https://github.com/ali205huzaifa/OMS-Backend.git
+cd OMS-Backend
 ```
 
 ### 🧩 Install Dependencies
@@ -35,7 +35,8 @@ npm install
 Create a `.env` file in the root directory:
 
 ```
-PORT=5000
+PORT=3000
+<==MongoDB Connection String==>
 MONGO_URI=mongodb://localhost:27017/oms
 JWT_SECRET=your_jwt_secret_here
 ```
@@ -48,7 +49,7 @@ JWT_SECRET=your_jwt_secret_here
 npm run dev
 ```
 
-The server should now be running on `http://localhost:5000`
+The server should now be running on `http://localhost:3000`
 
 ---
 
@@ -56,7 +57,6 @@ The server should now be running on `http://localhost:5000`
 
 | Method | Endpoint                  | Description                     |
 |--------|---------------------------|---------------------------------|
-| POST   | `/auth/register-admin`    | Public route to create first admin |
 | POST   | `/auth/login`             | Login with email & password     |
 | POST   | `/auth/forgot-password`   | Reset password (simplified)     |
 | POST   | `/auth/register`          | Admin-only: register users      |
@@ -118,7 +118,7 @@ The server should now be running on `http://localhost:5000`
 ## 🧪 Testing the API
 
 1. Open [Postman](https://www.postman.com/)
-2. Import the file: `OMS_Postman_Collection.json`
+2. Import the file: `OMS API Testing Collection.postman_collection.json`
 3. Set `{{base_url}}` to `http://localhost:5000`
 4. Test each module using example requests
 5. Use the `/auth/login` endpoint to get a JWT token
