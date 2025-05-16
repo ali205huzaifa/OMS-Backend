@@ -46,7 +46,7 @@ JWT_SECRET=your_jwt_secret_here
 ### 🏁 Run the Server
 
 ```bash
-npm run dev
+node server.js
 ```
 
 The server should now be running on `http://localhost:3000`
